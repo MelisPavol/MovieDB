@@ -10,7 +10,7 @@ public class SignInTest extends BaseTest{
     }
     @Test
     public void doTestFailed() {
-        var a = 3;
-        Assert.assertEquals(3, a);
+        var a = 2;
+        Assert.assertEquals(2, a);
     }
 }
