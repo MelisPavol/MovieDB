@@ -11,11 +11,12 @@ public class HomePage {
         PageFactory.initElements(driver, this); //init all elements on this page ,
     };
 
-    @FindBy(xpath = "//li/a[@href='/login' and text()='Login'] ")
-    private WebElement loginButton;
+    @FindBy(xpath = "//li/a[@href='/login']")
+    private WebElement loginHomePageButton;
 
-    public LoginPage clickLogin(){
-        loginButton.click();
+    public LoginPage clickLogin() throws InterruptedException {
+        Thread.sleep(3000);
+        loginHomePageButton.click();
         return new LoginPage(driver);
     }
 

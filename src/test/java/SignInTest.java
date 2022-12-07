@@ -7,7 +7,7 @@ import static org.testng.Assert.assertEquals;
 public class SignInTest extends BaseTest {
 
     @Test
-    void test_US_01_TC_01_Valid_SIng_in() {
+    void test_US_01_TC_01_Valid_SIng_in() throws InterruptedException {
         var userName = homePage
                 .clickLogin()
                 .enterUsername(TestValues.Test_Valid_UserName)
