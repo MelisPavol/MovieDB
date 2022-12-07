@@ -16,6 +16,5 @@ public class SignInTest extends BaseTest {
                 .getUserNameTitle();
 
         assertEquals(userName,"qwertest");
-
     }
 }

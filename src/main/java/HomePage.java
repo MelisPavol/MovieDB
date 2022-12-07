@@ -8,14 +8,13 @@ public class HomePage {
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, this); //init all elements on this page ,
-    };
+        PageFactory.initElements(driver, this);
+    }
 
     @FindBy(xpath = "//li/a[@href='/login']")
     private WebElement loginHomePageButton;
 
-    public LoginPage clickLogin() throws InterruptedException {
-        Thread.sleep(3000);
+    public LoginPage clickLogin() {
         loginHomePageButton.click();
         return new LoginPage(driver);
     }
