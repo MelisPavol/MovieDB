@@ -8,13 +8,13 @@ public class HomePage {
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, this); //init all elements on this page ,
-    };
+        PageFactory.initElements(driver, this);
+    }
 
-    @FindBy(xpath = "//ul[@class='primary']//a[normalize-space()='Login']")
+    @FindBy(xpath = "//li/a[@href='/login' and text()='Login']")
     private WebElement loginButton;
 
-    public LoginPage login(){
+    public LoginPage clickLogin() {
         loginButton.click();
         return new LoginPage(driver);
     }
