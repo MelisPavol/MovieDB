@@ -11,11 +11,11 @@ public class HomePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//li/a[@href='/login' and text()='Login']")
-    private WebElement loginButton;
+    @FindBy(xpath = "//li/a[@href='/login']")
+    private WebElement loginHomePageButton;
 
     public LoginPage clickLogin() {
-        loginButton.click();
+        loginHomePageButton.click();
         return new LoginPage(driver);
     }
 

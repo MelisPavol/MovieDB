@@ -17,13 +17,11 @@ public class BaseTest {
     private WebDriver driver;
     protected HomePage homePage;
 
-
-    @BeforeTest
+    @BeforeMethod
     void setup() throws Exception {
         var link = "https://www.themoviedb.org/";
 
         WebDriverManager.chromedriver().setup();
-        Thread.sleep(1000);
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
@@ -34,21 +32,19 @@ public class BaseTest {
         options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
         options.setExperimentalOption("useAutomationExtension", false);
         options.addArguments("user-agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36");
-
         driver = new ChromeDriver(options);
 
         driver.get(link);
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-
         homePage = new HomePage(driver);
 
     }
 
-    @AfterTest
-    void closeBrowser() {
+    @AfterMethod
+    void closeBrowser() throws InterruptedException {
           driver.close(); //Close webdriver!
-        // driver.quit(); //Close chrome  browser
+          driver.quit(); //Close chrome  browser
     }
 
 
