@@ -14,7 +14,7 @@ public class SignInTest extends BaseTest {
                 .enterPassword(TestValues.Test_Valid_Password)
                 .clickLoginButton()
                 .getUserNameTitle();
-        
+
         assertEquals(userName,"qwertest");
 
     }
