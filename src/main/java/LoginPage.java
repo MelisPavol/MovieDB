@@ -22,17 +22,17 @@ public class LoginPage {
 
 
 
-    public LoginPage enterusername (String userName){
+    public LoginPage enterUsername (String userName){
         usernameTextField.click();
         usernameTextField.sendKeys(userName);
         return this;
     }
-    public LoginPage enterpassword(String password){
+    public LoginPage enterPassword(String password){
         passwordTextField.click();
         passwordTextField.sendKeys(password);
         return this;
     }
-    public UserPage loginButton(){
+    public UserPage clickLoginButton(){
         loginButtonLoginPage.click();
         return new UserPage(driver);
     }
