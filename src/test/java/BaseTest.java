@@ -17,8 +17,7 @@ public class BaseTest {
     private WebDriver driver;
     protected HomePage homePage;
 
-
-    @BeforeTest
+    @BeforeMethod
     void setup() throws Exception {
         var link = "https://www.themoviedb.org/";
 
@@ -33,8 +32,6 @@ public class BaseTest {
         options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
         options.setExperimentalOption("useAutomationExtension", false);
         options.addArguments("user-agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36");
-
-        //options.addArguments("--headless");
         driver = new ChromeDriver(options);
 
         driver.get(link);
@@ -44,10 +41,10 @@ public class BaseTest {
 
     }
 
-    @AfterTest
-    void closeBrowser() {
+    @AfterMethod
+    void closeBrowser() throws InterruptedException {
           driver.close(); //Close webdriver!
-        // driver.quit(); //Close chrome  browser
+          driver.quit(); //Close chrome  browser
     }
 
 

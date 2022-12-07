@@ -9,7 +9,7 @@ public class LoginPage {
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this); //init all elements on this page ,
-    };
+    }
 
     @FindBy(xpath = "//input[@id='username']")
     private WebElement usernameTextField;
@@ -20,6 +20,8 @@ public class LoginPage {
     @FindBy(xpath = "//input[@id='login_button']")
     private WebElement loginButtonLoginPage;
 
+    @FindBy(xpath = "//h2/span")
+    private WebElement invalidSingInText;
 
 
     public LoginPage enterUsername (String userName){
@@ -36,6 +38,12 @@ public class LoginPage {
         loginButtonLoginPage.click();
         return new UserPage(driver);
     }
+    public LoginPage clickLoginButtonInvalid(){
+        loginButtonLoginPage.click();
+        return this;
+    }
+    public String getInvalidSignInText(){return invalidSingInText.getText();}
+
 
 
 }
