@@ -14,13 +14,13 @@ public class ListTest extends BaseTest {
                 .clickViewProfile()
                 .clickListsButton()
                 .clickCreateList()
-                .enterName(TestValues.nameText)
+                .enterName(TestValues.listTitle)
                 .clickContinueButton()
                 .clickUserIcon()
                 .clickViewProfile()
                 .clickListsButton()
                 .getAllLists();
 
-        assertTrue(lists.contains(TestValues.nameText));
+        assertTrue(lists.contains(TestValues.listTitle));
     }
 }

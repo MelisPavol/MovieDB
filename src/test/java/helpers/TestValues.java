@@ -12,6 +12,6 @@ public class TestValues {
 
     public static String TEST_INVALID_PASSWORD = "qa";
 
-    public static String nameText = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+    public static String listTitle = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 
 }

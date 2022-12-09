@@ -21,8 +21,6 @@ public class NewListPage {
 
     @FindBy(xpath = "//span[@class='avatar background_color yellow']")
     private WebElement userIcon;
-    //public static String nameText = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());;
-
 
     public NewListPage enterName(String nameText) {
         name.sendKeys(nameText);
