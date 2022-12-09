@@ -14,11 +14,16 @@ public class HomePage {
     @FindBy(xpath = "//li/a[@href='/login']")
     private WebElement loginHomePageButton;
 
+    @FindBy(xpath = "//span[@class='avatar background_color yellow']")
+    private WebElement userIcon;
+
     public LoginPage clickLogin() {
         loginHomePageButton.click();
         return new LoginPage(driver);
     }
 
-
-
+    public UserDropDownMenu clickUserIcon() {
+        userIcon.click();
+        return new UserDropDownMenu(driver);
+    }
 }

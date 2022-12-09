@@ -14,12 +14,21 @@ public class UserPage {
     @FindBy(xpath = "(//a[normalize-space()='qwertest'])[1]")
     private WebElement userNameTitle;
 
+    @FindBy(xpath = "//a[@class = 'k-link k-menu-link' and text() ='Lists']")
+    private WebElement listsButton;
+
+    @FindBy(xpath = "//a[@class='logo']")
+    private WebElement logo;
 
     public String getUserNameTitle(){return userNameTitle.getText();}
 
+    public ListsPage clickListsButton(){
+        listsButton.click();
+        return new ListsPage(driver);
+    }
 
-
-
-
-
+    public HomePage clickLogo(){
+        logo.click();
+        return new HomePage(driver);
+    }
 }
