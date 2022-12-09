@@ -9,6 +9,8 @@ public class TestValues {
 
     public static String TEST_INVALID_PASSWORD = "qa";
 
+    public static String TEST_SEATCH_VALID_TEXT_AT_SEARCH_TEXT_FIELD= "Aliens vs Predator: Requiem";
+
 
 
 

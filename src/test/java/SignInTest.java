@@ -14,10 +14,11 @@ public class SignInTest extends BaseTest {
                 .clickLoginButton()
                 .getUserNameTitle();
 
-        assertEquals(userName,"qwertest");
+        assertEquals(userName, "qwertest");
     }
+
     @Test
-    void test_US_01_TC_02_Invalid_Sing_in(){
+    void test_US_01_TC_02_Invalid_Sing_in() {
         var invalidSignInText = homePage
                 .clickLogin()
                 .enterUsername(TestValues.TEST_INVALID_USERNAME)
@@ -26,7 +27,7 @@ public class SignInTest extends BaseTest {
                 .getInvalidSignInText();
 
         System.out.println("Print" + invalidSignInText);
-        assertEquals(invalidSignInText,"  There was a problem");
+        assertEquals(invalidSignInText, "  There was a problem");
 
     }
 
