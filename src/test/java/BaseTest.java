@@ -43,7 +43,7 @@ public class BaseTest {
     }
 
     @AfterMethod
-    void closeBrowser() throws InterruptedException {
+    void closeBrowser(){
           driver.close(); //Close webdriver!
           driver.quit(); //Close chrome  browser
     }
