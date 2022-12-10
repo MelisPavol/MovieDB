@@ -25,10 +25,11 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
-        //options.addArguments("--headless");
+        options.addArguments("--headless");
         options.addArguments("--disable-gpu");
         options.addArguments("--window-size=1280,800");
         options.addArguments("--allow-insecure-localhost");
+        options.addArguments("incognito");
         options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
         options.setExperimentalOption("useAutomationExtension", false);
         options.addArguments("user-agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36");
@@ -43,8 +44,8 @@ public class BaseTest {
 
     @AfterMethod
     void closeBrowser() throws InterruptedException {
-          //driver.close(); //Close webdriver!
-          //driver.quit(); //Close chrome  browser
+          driver.close(); //Close webdriver!
+          driver.quit(); //Close chrome  browser
     }
 
 
@@ -62,5 +63,14 @@ public class BaseTest {
             }
         }
 
+    }
+
+    void signIn(String userName, String password) {
+         homePage
+                .clickLogin()
+                .enterUsername(userName)
+                .enterPassword(password)
+                .clickLoginButton()
+                 .clickLogo();
     }
 }

@@ -23,9 +23,18 @@ public class UserPage {
 
     @FindBy(xpath = "//input[@id='search_v4']")
     private WebElement searchTextFieldEnter;
+    @FindBy(xpath = "//a[@class = 'k-link k-menu-link' and text() ='Lists']")
+    private WebElement listsButton;
+
+    @FindBy(xpath = "//a[@class='logo']")
+    private WebElement logo;
 
     public String getUserNameTitle(){return userNameTitle.getText();}
 
+    public ListsPage clickListsButton(){
+        listsButton.click();
+        return new ListsPage(driver);
+    }
     public UserPage clickSearchIcon(){
         searchIcon.click();
         return this;
@@ -41,9 +50,8 @@ public class UserPage {
 
     }
 
-
-
-
-
-
+    public HomePage clickLogo(){
+        logo.click();
+        return new HomePage(driver);
+    }
 }
