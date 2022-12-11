@@ -16,4 +16,6 @@ public class TestValues {
 
     public static String listTitle = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 
+    public static String TEST_SEARCH_INVALID_TEXT_AT_SEARCH_TEXT_FIELD = "ddsdsdsd";
+
 }

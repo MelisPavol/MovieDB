@@ -29,6 +29,8 @@ public class UserPage {
     @FindBy(xpath = "//a[@class='logo']")
     private WebElement logo;
 
+
+
     public String getUserNameTitle(){return userNameTitle.getText();}
 
     public ListsPage clickListsButton(){
@@ -44,9 +46,9 @@ public class UserPage {
         searchTextField.click();
         return this;
     }
-    public MoviePageAlienVsPredator searchEnter (){
+    public SearchPage enterSearch(){
         searchTextFieldEnter.sendKeys(Keys.ENTER);
-        return new MoviePageAlienVsPredator(driver);
+        return new SearchPage(driver);
 
     }
 
@@ -54,4 +56,10 @@ public class UserPage {
         logo.click();
         return new HomePage(driver);
     }
+    public UserPage enterInvalidSearchText(String invalidSearch){
+        searchTextField.sendKeys(invalidSearch);
+        searchTextField.click();
+        return this;
+    }
+
 }
