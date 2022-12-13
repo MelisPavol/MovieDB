@@ -11,8 +11,15 @@ public class FavoritesPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//a/h2[text()='The Guardians of the Galaxy Holiday Special']")
+    @FindBy(xpath = "//a/h2")
     private WebElement titleMovieTextTheGuardians;
+
+    @FindBy(xpath = "//div[@id ='card_movie_5fd2c42d37b3a900408a77bf']")
+    private WebElement cardTheGuardians;
+
+    public Boolean cardIsDisplayed() throws InterruptedException {
+        Thread.sleep(3000);
+        return cardTheGuardians.isDisplayed();}
 
     public String getTitleMovieTextTheGuardians() throws InterruptedException {
         Thread.sleep(3000);
