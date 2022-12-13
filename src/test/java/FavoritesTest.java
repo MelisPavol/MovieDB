@@ -6,7 +6,7 @@ import static org.testng.Assert.assertEquals;
 public class FavoritesTest extends BaseTest {
 
     @Test
-    void test_US_04_TC_01_Add_to_favourite() {
+    void test_US_04_TC_01_Add_to_favourite() throws InterruptedException {
         var movieTitleFromFavoritesPage = homePage
                 .clickLogin()
                 .enterUsername(TestValues.TEST_VALID_USERNAME)
@@ -24,6 +24,7 @@ public class FavoritesTest extends BaseTest {
                 .clickFavotitesMovies()
                 .getTitleMovieTextTheGuardians();
 
+        System.out.println(movieTitleFromFavoritesPage);
         assertEquals(movieTitleFromFavoritesPage,"The Guardians of the Galaxy Holiday Special");
     }
 }

@@ -14,7 +14,9 @@ public class FavoritesPage {
     @FindBy(xpath = "//a/h2[text()='The Guardians of the Galaxy Holiday Special']")
     private WebElement titleMovieTextTheGuardians;
 
-    public String getTitleMovieTextTheGuardians(){return titleMovieTextTheGuardians.getText();}
+    public String getTitleMovieTextTheGuardians() throws InterruptedException {
+        Thread.sleep(3000);
+        return titleMovieTextTheGuardians.getText();}
 
 
 
