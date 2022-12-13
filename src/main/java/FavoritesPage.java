@@ -14,12 +14,12 @@ public class FavoritesPage {
     @FindBy(xpath = "//a/h2")
     private WebElement titleMovieTextTheGuardians;
 
-    @FindBy(xpath = "//div/h2[text() = 'My Favorites']")
-    private WebElement favPageTitle;
+    @FindBy(xpath = "//div[@class = 'items_wrapper']")
+    private WebElement item;
 
-    public String getPageTitle() {
+    public Boolean itemIsDisplayed() {
 
-        return favPageTitle.getText();}
+        return item.isDisplayed();}
 
     public String getTitleMovieTextTheGuardians()  {
 
