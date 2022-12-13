@@ -17,12 +17,19 @@ public class SearchPage {
     @FindBy(xpath = "//div/p[text()='There are no movies that matched your query.']")
     private WebElement invalidSearchText;
 
+    @FindBy(xpath = "//h2[text()='The Guardians of the Galaxy Holiday Special']")
+    private WebElement movieTheGuardians;
+
+
     public String getTextAlienVsPredator(){
         return movieAlienVsPredator.getText();
     }
 
     public String getInvalidSearchText(){return invalidSearchText.getText();}
 
-
+    public MoviePage clickMovieTheGuardians (){
+        movieTheGuardians.click();
+        return new MoviePage(driver);
+    }
 
 }
