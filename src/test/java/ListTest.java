@@ -5,7 +5,7 @@ import static org.testng.Assert.assertTrue;
 
 public class ListTest extends BaseTest {
 
-@Ignore
+//@Ignore
     @Test
     void test_US_03_TC_01_Create_new_list_Valid_data() throws InterruptedException {
         signIn(TestValues.TEST_VALID_USERNAME, TestValues.TEST_VALID_PASSWORD);

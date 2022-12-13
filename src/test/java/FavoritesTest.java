@@ -24,13 +24,8 @@ public class FavoritesTest extends BaseTest {
                 .clickFavotitesOverview()
                 .clickFavotitesMovies()
                 .itemIsDisplayed();
-                //.getPageTitle();
-               // .getTitleMovieTextTheGuardians();
-
-        System.out.println(movieTitleFromFavoritesPage);
 
         assertTrue(movieTitleFromFavoritesPage);
-
         //assertEquals(movieTitleFromFavoritesPage,"The Guardians of the Galaxy Holiday Special");
     }
 }
