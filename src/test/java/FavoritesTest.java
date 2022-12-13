@@ -23,13 +23,13 @@ public class FavoritesTest extends BaseTest {
                 .clickOverViewButton()
                 .clickFavotitesOverview()
                 .clickFavotitesMovies()
-                        .getPageTitle();
-                //.getTitleMovieTextTheGuardians();
+                //.getPageTitle();
+                .getTitleMovieTextTheGuardians();
 
         System.out.println(movieTitleFromFavoritesPage);
 
-        assertEquals(movieTitleFromFavoritesPage,"My Favorites");
+        //assertEquals(movieTitleFromFavoritesPage,"My Favorites");
 
-       // assertEquals(movieTitleFromFavoritesPage,"The Guardians of the Galaxy Holiday Special");
+        assertEquals(movieTitleFromFavoritesPage,"The Guardians of the Galaxy Holiday Special");
     }
 }
