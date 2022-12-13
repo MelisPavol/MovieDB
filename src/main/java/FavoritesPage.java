@@ -14,15 +14,15 @@ public class FavoritesPage {
     @FindBy(xpath = "//a/h2")
     private WebElement titleMovieTextTheGuardians;
 
-    @FindBy(xpath = "//div[@id ='card_movie_5fd2c42d37b3a900408a77bf']")
-    private WebElement cardTheGuardians;
+    @FindBy(xpath = "//div/h2[text() = 'My Favorites']")
+    private WebElement favPageTitle;
 
-    public Boolean cardIsDisplayed() throws InterruptedException {
-        Thread.sleep(3000);
-        return cardTheGuardians.isDisplayed();}
+    public String getPageTitle() {
 
-    public String getTitleMovieTextTheGuardians() throws InterruptedException {
-        Thread.sleep(3000);
+        return favPageTitle.getText();}
+
+    public String getTitleMovieTextTheGuardians()  {
+
         return titleMovieTextTheGuardians.getText();}
 
 
