@@ -27,7 +27,7 @@ public class BaseTest {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
         options.addArguments("--disable-gpu");
-        options.addArguments("--window-size=1280,800");
+        options.addArguments("--window-size=1980,1200");
         options.addArguments("--allow-insecure-localhost");
         options.addArguments("incognito");
         options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
