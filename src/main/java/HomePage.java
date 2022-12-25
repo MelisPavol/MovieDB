@@ -15,7 +15,7 @@ public class HomePage {
     @FindBy(xpath = "//li/a[@href='/login']")
     private WebElement loginHomePageButton;
 
-    @FindBy(xpath = "//span[@class='avatar background_color yellow']")
+    @FindBy(xpath = "//li/a[@title='Profile and Settings']")
     private WebElement userIcon;
 
     public LoginPage clickLogin() {
