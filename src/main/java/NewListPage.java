@@ -22,6 +22,9 @@ public class NewListPage {
     @FindBy(xpath = "//span[@class='avatar background_color yellow']")
     private WebElement userIcon;
 
+    @FindBy(xpath = "//li[text()='name must be provided']")
+    private WebElement invalidText;
+
     public NewListPage enterName(String nameText) {
         name.sendKeys(nameText);
         return this;
@@ -35,5 +38,7 @@ public class NewListPage {
         userIcon.click();
         return new UserDropDownMenu(driver);
     }
-
+    public String invalidTextfield(){
+        return invalidText.getText();
+    }
 }
